@@ -1,6 +1,0 @@
-module move_task_to_back {
-  umbrella header "move_task_to_back-umbrella.h"
-
-  export *
-  module * { export * }
-}

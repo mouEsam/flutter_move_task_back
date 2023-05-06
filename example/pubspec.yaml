@@ -1,4 +1,4 @@
-name: move_task_to_back_example
+name: flutter_move_task_back_example
 description: Demonstrates how to use the move_task_to_back plugin.
 publish_to: 'none'
 
@@ -15,7 +15,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  move_task_to_back:
+  flutter_move_task_back:
     path: ../
 
 flutter:

@@ -14,7 +14,7 @@ move_task_to_back: ^x.y.z
 
 ### import
 ```dart
-import 'package:move_task_to_back/move_task_to_back.dart';
+import 'package:move_task_to_back/flutter_move_task_back.dart';
 ```
 
 ### use it

@@ -1,4 +1,4 @@
-package com.hidetag.move_task_to_back
+package com.mouEsam.flutter_move_task_back
 
 import android.app.Activity
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -8,25 +8,30 @@ import io.flutter.plugin.common.BinaryMessenger
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.PluginRegistry.Registrar
 
-const val CHANNEL_NAME = "move_task_to_back"
 
-class MoveTaskToBackPlugin : FlutterPlugin, ActivityAware {
+
+class FlutterMoveTaskBackPlugin : FlutterPlugin, ActivityAware {
 
     private lateinit var channel: MethodChannel
     private lateinit var handler: MethodCallHandlerImp
 
     companion object {
+
+        private const val CHANNEL_NAME = "flutter_move_task_back"
+
         @JvmStatic
         fun registerWith(registrar: Registrar) {
-            val plugin = MoveTaskToBackPlugin()
+            val plugin = FlutterMoveTaskBackPlugin()
             plugin.setupChannel(registrar.messenger(), registrar.activity())
         }
     }
 
-    private fun setupChannel(messenger: BinaryMessenger, activity: Activity) {
+    private fun setupChannel(messenger: BinaryMessenger, activity: Activity?) {
         channel = MethodChannel(messenger, CHANNEL_NAME)
         handler = MethodCallHandlerImp()
-        handler.setActivity(activity)
+        if (activity != null) {
+            handler.setActivity(activity)
+        }
         channel.setMethodCallHandler(handler)
     }
 

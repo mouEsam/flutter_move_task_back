@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:move_task_to_back/move_task_to_back.dart';
+import 'package:flutter_move_task_back/flutter_move_task_back.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +21,7 @@ class FirstScreen extends StatelessWidget {
         title: const Text('Plugin example app'),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text('go to second screen'),
           onPressed: () {
             Navigator.of(context).push(MaterialPageRoute(builder: (context) {
@@ -42,7 +42,7 @@ class SecondScreen extends StatelessWidget {
         title: Text("SecondScreen"),
       ),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
           child: Text("Tap to MoveTaskToBack"),
           onPressed: test,
         ),
@@ -52,7 +52,7 @@ class SecondScreen extends StatelessWidget {
 
   Future<void> test() async {
     try {
-      await MoveTaskToBack.moveTaskToBack(nonRoot: false);
+      await FlutterMoveTaskBack.moveTaskToBack(nonRoot: false);
     } on Exception {
       print("something wrong...");
     }

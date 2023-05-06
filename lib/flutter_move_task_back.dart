@@ -3,9 +3,9 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 
-class MoveTaskToBack {
+class FlutterMoveTaskBack {
   static const MethodChannel _channel =
-      const MethodChannel('move_task_to_back');
+      const MethodChannel('flutter_move_task_back');
 
   static Future<void> moveTaskToBack({bool nonRoot = true}) async {
     if (Platform.isAndroid) {
