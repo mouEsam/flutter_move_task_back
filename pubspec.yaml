@@ -1,12 +1,11 @@
 name: flutter_move_task_back
 description: A plugin that helps you use android moveTaskToBack.
 version: 1.0.0
-author: mouEsam
 homepage: https://github.com/mouEsam/flutter_move_task_back
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
-  flutter: ">=1.17.0"
+  flutter: ">=1.20.0"
 
 dependencies:
   flutter:
